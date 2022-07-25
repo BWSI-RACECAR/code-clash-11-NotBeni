@@ -48,7 +48,7 @@ class Solution:
 
         prices.append(0)
 
-        # print(prices)
+        print(prices)
 
         for x in range(1, len(prices)):
             if prices[x] < prices[x-1]:
