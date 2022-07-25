@@ -48,6 +48,8 @@ class Solution:
 
         prices.append(0)
 
+        print(prices)
+
         for x in range(1, len(prices)):
             if prices[x] < prices[x-1]:
                 small_price_list = prices[last_index:x]
