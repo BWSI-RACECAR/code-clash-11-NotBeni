@@ -60,10 +60,13 @@ class Solution:
                 highest_prof = 0
                 # print(small_price_list)
 
-
-        highest = max(highest_prof_list)
-        highest_prof_list.remove(highest)
-        second = max(highest_prof_list)
+        if len(highest_prof_list) > 1:
+            highest = max(highest_prof_list)
+            highest_prof_list.remove(highest)
+            second = max(highest_prof_list)
+        elif len(highest_prof_list) > 0:
+            return highest_prof_list[0]
+        else: return 0
 
         return highest + second
 
