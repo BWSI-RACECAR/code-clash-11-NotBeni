@@ -48,19 +48,21 @@ class Solution:
 
         prices.append(0)
 
-        print(prices)
+        # print(prices)
 
         for x in range(1, len(prices)):
             if prices[x] < prices[x-1]:
                 small_price_list = prices[last_index:x]
-                last_index = x                
+                last_index = x              
                 for i in small_price_list:
                     for n in small_price_list:
-                        if n-i > highest_prof and prices.index(n) > prices.index(i):
+                        if n-i > highest_prof and small_price_list.index(n) > small_price_list.index(i):
                             highest_prof = n-i
                 highest_prof_list.append(highest_prof)
                 highest_prof = 0
                 # print(small_price_list)
+
+        # print(highest_prof_list)
 
         if len(highest_prof_list) > 1:
             highest = max(highest_prof_list)
